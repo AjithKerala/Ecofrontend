@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="vav.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .header {
+            background-color: #007bff;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0px 25px; /* Corrected line */
+            height: 80px;
+            align-items: center;
+        }
+        .logo h1 {
+            font-family: cursive;
+            font-size: 55px;
+            font-weight: 800;
+            color: #fff;
+            text-align: center;
+        }
+        .search input {
+            height: 35px;
+            width: 100%;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .iocons {
+            text-align: right;
+        }
+        .iocons .fa {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            padding: 0px 10px;
+            transition: 0.6s;
+        }
+        .iocons .fa:hover {
+            color: black;
+        }
+        .links {
+            background-color: #007bff;
+            justify-content: start;
+            display: none;
+        }
+        .links a {
+            display: block;
+            padding-left: 90px;
+            text-decoration: none;
+            padding-bottom: 15px;
+            font-size: 18px;
+            color: #fff;
+        }
+        .showmylinks {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href=""><h1>Flipkart</h1></a>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="Search">
+        </div>
+        <div class="iocons">
+            <a href="" class="fa fa-heart" style="font-size: 24px"></a>
+            <a href="" class="fa fa-shopping-cart" style="font-size: 24px"></a>
+            <a href="" class="fa fa-user-circle" style="font-size: 24px"></a>
+            <a href="" class="fa fa-tasks" style="font-size: 24px"></a>
+        </div>
+    </div>
+    <div class="links">
+        <a href="">Women's</a>
+        <a href="">Men's</a>
+        <a href="">Women's Shoes</a>
+        <a href="">Men's Shoes</a>
+        <a href="">Gifts</a>
+        <a href="">Toys</a>
+    </div>
+    <script lang="script" type="text/javascript">
+        document.querySelector(".fa.fa-tasks").addEventListener("click", function() {
+            document.getElementsByClassName("links")[0].classList.toggle("showmylinks");
+        });
+    </script>
+</body>
+</html>
